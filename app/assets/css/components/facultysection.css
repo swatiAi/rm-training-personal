@@ -1,0 +1,122 @@
+.dfSec {
+  /* local tokens (keeps the file portable) */
+  --cyan: #1ea7c6;
+  --blue: #0b5ed7;
+  --bg: #f5f7fa;
+  --text: #111827;
+  --muted: #6b7280;
+
+  @apply bg-[var(--bg)] pt-[64px] pb-[70px];
+}
+
+.dfSec__wrap {
+  @apply mx-auto max-w-[1200px] px-[22px];
+}
+
+/* ===== Header ===== */
+.dfSecHead {
+  @apply text-center;
+}
+
+.dfSecHead__title {
+  @apply m-0 text-[44px] font-black tracking-[0.02em] leading-[1.05];
+}
+
+.dfSecHead__titleBlack {
+  @apply text-black;
+}
+
+.dfSecHead__titleCyan {
+  @apply text-[var(--cyan)];
+}
+
+.dfSecHead__kicker {
+  @apply mt-[10px] text-[18px] font-bold;
+  color: #0055B8;
+}
+
+.dfSecHead__desc {
+  @apply mx-auto mt-[8px] max-w-[760px] text-[13px] leading-[1.45] text-[var(--muted)] font-bold;
+}
+
+/* ===== Grid ===== */
+.dfSecGrid {
+  @apply mt-[40px] grid gap-[18px];
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1200px) {
+  .dfSecGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 980px) {
+  .dfSecGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  .dfSecGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .dfSecGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dfCard {
+  @apply overflow-hidden rounded-[22px] bg-white text-center;
+  @apply flex flex-col;
+
+
+  @apply transition-all duration-200 ease-out;
+  @apply hover:-translate-y-[4px] hover:shadow-[0_18px_42px_rgba(15,23,42,0.14)];
+
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+/* TOP IMAGE AREA: flush to the top */
+.dfCard__media {
+  @apply p-0 bg-[#eef2f7] w-full overflow-hidden;
+  aspect-ratio: 1 / 1;   
+  @apply flex items-start justify-center; 
+}
+
+.dfCard__img {
+  @apply block w-full h-full object-cover;
+  object-position: top center;
+}
+
+/* Text area blends into the same surface */
+.dfCard__body {
+  @apply bg-white px-[16px] pt-[14px] pb-[20px];
+  @apply min-h-[150px];
+}
+
+/* Name */
+.dfCard__name {
+  @apply m-0 text-[12.5px] font-extrabold text-[var(--blue)];
+}
+
+/* Ensure all text shows nicely + respects \n */
+.dfCard__role,
+.dfCard__desc {
+  @apply whitespace-pre-line;
+}
+
+/* Role */
+.dfCard__role {
+  @apply mt-[8px] text-[11.5px] text-gray-700 leading-[1.35];
+}
+
+/* Desc */
+.dfCard__desc {
+  @apply mt-[8px] text-[10.8px] text-[var(--muted)] leading-[1.35] font-bold;
+}
+
+.dfSec__note {
+  /* auto left/right centers block */
+  @apply mx-auto mt-[34px] max-w-[600px] text-center text-[15px] text-[var(--muted)] font-bold;
+}

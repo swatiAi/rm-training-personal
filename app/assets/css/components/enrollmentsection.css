@@ -1,0 +1,187 @@
+.heSec {
+  --border: #8dd3ff;
+  --cardbg: #f7fbff;
+  --muted: #6b7280;
+
+  @apply bg-white py-16;
+}
+
+.heSec__wrap {
+  @apply mx-auto px-[22px];
+  max-width: 1200px;
+}
+
+/* ===== TOP ROW ===== */
+.heTop {
+  @apply grid items-start gap-3; /* was gap-11 */
+  grid-template-columns: 1fr 1.55fr; /* was 1fr 1.35fr */
+}
+
+@media (max-width: 980px) {
+  .heTop {
+    @apply gap-7;
+    grid-template-columns: 1fr;
+  }
+}
+
+.heTop__left {
+  @apply pt-6;
+}
+
+.heTitle {
+  @apply m-0 text-[46px] font-black leading-[1.05] tracking-[0.02em];
+}
+
+.heTitle__black {
+  @apply text-black;
+}
+
+.heKicker {
+  @apply mt-3 mb-0 text-[15px] font-bold;
+  color: #0055b8; /* requested blue */
+}
+
+.heDesc {
+  @apply mt-2 mb-0 text-[14px] font-bold;
+  color: var(--muted);
+}
+
+/* Quota cards */
+.heQuotaGrid {
+  @apply grid gap-3;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 640px) {
+  .heQuotaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.heQuotaCard {
+  @apply  overflow-hidden rounded-[14px] border border-gray-200 bg-white;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+.heQuotaCard__imgWrap {
+  @apply h-[115px] overflow-hidden;
+}
+
+.heQuotaCard__img {
+  @apply h-full w-full object-cover block;
+}
+
+.heQuotaCard__body {
+  @apply px-5 py-[22px] text-center;
+}
+
+.heQuotaCard__num {
+  @apply text-[64px] font-black leading-none;
+  /* ✅ both 20s use main.css gradient */
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.heQuotaCard__label {
+  @apply mt-[10px] text-[18px];
+  color: var(--muted);
+}
+
+/* ===== ROWS (payment / refund) ===== */
+.heRow {
+  @apply mt-10 grid items-start gap-11; /* was mt-[46px] */
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 980px) {
+  .heRow {
+    @apply gap-7;
+    grid-template-columns: 1fr;
+  }
+}
+
+.heMedia {
+  @apply overflow-hidden rounded-[18px];
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.heMedia__img {
+  @apply w-full h-full block object-cover rounded-[18px];
+  height: 280px;
+}
+
+.heMedia--tall .heMedia__img {
+  height: 280px;
+  @apply mt-6;
+}
+
+@media (max-width: 640px) {
+  .heMedia__img {
+    height: 260px;
+  }
+}
+
+/* Right text blocks */
+.heContent {
+  @apply pt-0;
+}
+
+.heH3 {
+  @apply m-0 text-[36px] font-black leading-[1.1];
+}
+
+.heH3__black {
+  @apply text-black;
+}
+
+.heH3__gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* List items */
+.heList {
+  @apply mt-[18px] flex flex-col items-start gap-4;
+}
+
+.heListItem {
+  @apply inline-flex items-center gap-[14px] rounded-[16px] border p-4 w-fit max-w-full;
+  border-color: var(--border);
+  background: var(--cardbg);
+  box-shadow: 0 10px 26px rgba(11, 94, 215, 0.08);
+}
+
+.heListItem--compact {
+  @apply items-center;
+}
+
+.heCheck {
+  @apply grid place-items-center rounded-full text-white flex-none;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-gradient);
+  margin-top: 0; /* was 2px */
+}
+
+.heListItem--compact .heCheck {
+  @apply mt-0;
+}
+
+.cpPill__iconSvg {
+  @apply w-4 h-4;
+}
+
+/* Text */
+.heListItem__text {
+  @apply m-0 text-[11.5px] font-semibold leading-[1.2] text-gray-700 whitespace-nowrap;
+}
+/* Buttons row */
+.heBtns {
+  @apply mt-[22px] flex flex-wrap gap-4;
+}

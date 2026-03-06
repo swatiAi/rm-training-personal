@@ -1,0 +1,70 @@
+.wsaSec {
+  --b1: #0b5fa8;
+  --b2: #00a9c9;
+  --grad: linear-gradient(90deg, #0b5fa8 0%, #00a9c9 100%);
+
+  @apply bg-white pt-[70px] pb-[80px];
+}
+
+.wsaSec__wrap {
+  @apply max-w-[1100px] mx-auto px-6 text-center;
+}
+
+/* Title */
+.wsaSec__title {
+  @apply m-0 text-[40px] font-black text-[#111827] tracking-[-0.02em];
+}
+
+.wsaSec__title span {
+  color: var(--b1);
+}
+
+/* subtitle */
+.wsaSec__sub {
+  @apply mt-[10px] mb-[26px] text-[13px] leading-[1.5] text-[#6b7280] font-bold;
+}
+
+/* Grid */
+.wsaSec__grid {
+  @apply grid grid-cols-3 gap-[18px] items-stretch mt-2;
+}
+
+@media (max-width: 980px) {
+  .wsaSec__grid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 640px) {
+  .wsaSec__grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* Card */
+.wsaSecCard {
+  @apply flex items-center gap-[14px] py-4 px-[18px] rounded-[14px] bg-white text-left
+    border-[1.5px] border-[rgba(11,95,168,0.55)]
+    shadow-[0_10px_20px_rgba(17,24,39,0.06)];
+}
+
+/* icon placeholder */
+.wsaSecCard__icon {
+  @apply w-[44px] h-[44px] rounded-[12px] grid place-items-center flex-none
+    border border-[rgba(11,95,168,0.25)]
+    bg-[rgba(0,169,201,0.08)];
+}
+
+.wsaSecCard__img {
+  @apply w-[26px] h-[26px] object-contain block;
+}
+
+.wsaSecDot {
+  @apply w-[10px] h-[10px] rounded-full;
+  background: var(--grad);
+}
+
+/* text */
+.wsaSecCard__text {
+  @apply text-[13px] font-bold text-[#374151];
+}

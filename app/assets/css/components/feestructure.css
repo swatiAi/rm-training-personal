@@ -1,0 +1,180 @@
+.feeSec {
+  @apply bg-white py-20 lg:py-28;
+}
+
+.feeWrap {
+  @apply mx-auto w-full max-w-[1180px] px-6;
+}
+
+/* ===== Header ===== */
+.feeHead {
+  @apply text-center;
+}
+
+.feeTitle {
+  @apply m-0 text-[40px] font-extrabold tracking-[0.02em] leading-[1.05] lg:text-[48px];
+}
+
+.feeTitle__fee {
+  @apply text-black;
+}
+
+.feeTitle__grad {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.feeSub {
+  @apply mt-3 text-sm font-bold;
+  color: #0055B8;
+}
+
+/* ===== Options row ===== */
+.feeOptions {
+  @apply mt-10 grid grid-cols-1 gap-10 lg:gap-14;
+}
+
+@media (min-width: 1024px) {
+  .feeOptions {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Each option: image + text */
+.feeOpt {
+  @apply grid items-start gap-5;
+}
+
+@media (min-width: 1024px) {
+  .feeOpt {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+/* Image card */
+.feeOpt__img {
+  @apply overflow-hidden rounded-[22px];
+}
+
+.feeOpt__imgEl {
+  @apply block h-[260px] w-full object-cover;
+}
+
+@media (max-width: 780px) {
+  .feeOpt__imgEl {
+    @apply h-[220px];
+  }
+}
+
+/* Text */
+.feeOpt__body {
+  @apply pt-1;
+}
+
+.feeOpt__title {
+  @apply text-[20px] font-medium text-slate-700;
+}
+
+.feeOpt__price {
+  @apply mt-3 inline-flex rounded-[10px] px-4 py-2 text-[20px] font-extrabold text-white;
+  background: var(--primary-gradient);
+  box-shadow: 0 10px 18px rgba(11, 94, 215, 0.18);
+}
+
+/* ===== Bullets ===== */
+.feeBullets {
+  @apply mt-3 grid list-none gap-2 p-0;
+}
+
+.feeBullet {
+  @apply flex items-center gap-3;
+}
+
+.feeDot {
+  @apply h-[5px] w-[5px] rounded-full flex-none;
+  background: #6b7280;
+}
+
+.feeBullet__txt {
+  @apply text-[12px] font-bold leading-[1.65] whitespace-nowrap;
+  color: #6b7280;
+}
+
+.feeBullet--wrap {
+  @apply items-start;
+}
+
+.feeBullet--wrap .feeDot {
+  margin-top: 8px;
+}
+
+.feeBullet--wrap .feeBullet__txt {
+  @apply text-[11px] leading-[1.5];
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 260px;
+}
+
+@media (min-width: 1024px) {
+  .feeBullet--wrap .feeBullet__txt {
+    max-width: 290px;
+  }
+}
+
+
+.feeAdd {
+  @apply mt-12 text-center;
+}
+
+.feeAdd__label {
+  @apply mb-5 text-sm font-extrabold;
+  color: #0055B8;
+}
+
+/* center + stack like your other section */
+.feeAdd__pills {
+  @apply mt-[18px] flex flex-col items-center gap-4;
+}
+
+.feePill {
+  @apply inline-flex items-center gap-[14px]
+    rounded-[16px]
+    border p-4
+    w-fit max-w-full
+    text-left;
+  border-color: #8dd3ff;
+  background: #f7fbff;
+  box-shadow: 0 10px 26px rgba(11, 94, 215, 0.08);
+}
+
+.feeCheck {
+  @apply grid place-items-center rounded-full text-white flex-none;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-gradient);
+}
+
+.cpPill__iconSvg {
+  @apply h-4 w-4;
+  color: #fff;
+}
+
+.feePill__text {
+  @apply m-0 text-[11.5px] font-semibold leading-[1.2] text-gray-700;
+  white-space: normal;
+}
+
+.feeNote {
+  @apply mt-8 text-[12.5px] font-bold;
+  color: #6b7280;
+}
+
+.feeCta {
+  @apply mt-8 flex justify-center;
+}

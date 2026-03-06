@@ -1,0 +1,196 @@
+.psSec {
+  --b1: #0b5fa8;
+  --b2: #00a9c9;
+  --grad: linear-gradient(90deg, #0b5fa8 0%, #00a9c9 100%);
+
+  @apply bg-white py-[70px] pb-[80px];
+}
+
+.psSec__wrap {
+  @apply max-w-[1220px] mx-auto px-6;
+}
+
+/* Header */
+.psSec__head {
+  @apply text-center mb-[26px];
+}
+
+.psSec__title {
+  @apply m-0 text-[44px] font-black tracking-[-0.02em] text-[#111827];
+}
+
+.psSec__title span {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.psSec__sub {
+  @apply mt-[6px] mb-0 text-[20px] font-bold;
+  color: var(--b1);
+}
+
+.psSec__desc {
+  @apply mt-2 mb-0 text-[14px] leading-[1.4] text-[#6b7280] font-bold;
+}
+
+/* Grid */
+.psSec__grid {
+  @apply grid items-start;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 34px;
+}
+
+@media (max-width: 980px) {
+  .psSec__grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* Text block */
+.psSec__block {
+  @apply pt-[6px];
+}
+
+.psSecPillRow {
+  @apply flex gap-[10px] flex-wrap mb-2;
+}
+
+.psSecPill {
+  @apply inline-flex items-center rounded-[10px] text-[13px] font-extrabold leading-none whitespace-nowrap;
+  padding: 15px 14px;
+}
+
+.psSecPill--blue {
+  @apply text-white shadow-[0_10px_20px_rgba(11,95,168,0.12)];
+  background: #0b5fa8;
+}
+
+.psSecPill--cyan {
+  @apply text-white shadow-[0_10px_20px_rgba(0,169,201,0.12)];
+  background: var(--grad);
+}
+
+.psSecPill--dark {
+  @apply text-white my-[6px] mb-3;
+  background: #3D3D3D;
+  max-width: fit-content;
+}
+
+.psSecPill--soft {
+  @apply text-white mt-[14px] mb-[10px] shadow-[0_10px_20px_rgba(11,95,168,0.10)];
+  background: var(--grad);
+  max-width: fit-content;
+}
+
+.psSec__p {
+  @apply text-[16px] leading-[1.65] text-[#35383f] max-w-[560px] font-bold;
+}
+
+/* What you’ll get list */
+.psSecGetList {
+  @apply list-none p-0 m-0 grid gap-[10px];
+}
+
+.psSecGetItem {
+  @apply flex gap-[10px] items-start;
+}
+
+.psSecNumWrap {
+  @apply relative flex w-[22px] justify-center flex-none;
+}
+
+.psSecGetItem:not(:last-child) .psSecNumWrap::after {
+  content: '';
+  @apply absolute left-1/2 top-[24px] w-[2px] h-[calc(100%+8px)] -translate-x-1/2 rounded-full;
+  background: linear-gradient(180deg, rgba(11, 95, 168, 0.65) 0%, rgba(0, 169, 201, 0.35) 100%);
+}
+
+.psSecNum {
+  @apply relative z-[1] w-[22px] h-[22px] rounded-full text-white grid place-items-center text-[11px] font-black flex-none;
+  background: #0b5fa8;
+}
+
+.psSecTxt {
+  @apply text-[16px] leading-[1.55] font-semibold text-[#374151];
+}
+
+/* Image card */
+.psSecImageCard {
+  @apply relative rounded-[18px] overflow-hidden
+    shadow-[0_16px_28px_rgba(17,24,39,0.10)]
+    w-full max-w-[520px] justify-self-end;
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+
+.psSecImg {
+  @apply w-full h-full object-cover block;
+}
+
+/* overlay */
+.psSecOverlay {
+  @apply absolute left-0 right-0 bottom-0 text-white;
+  padding: 14px 14px 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 70%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+}
+
+.psSecOverlay--small {
+  @apply p-[14px];
+}
+
+.psSecOvTitle {
+  @apply text-[15px] font-black mb-2;
+}
+
+.psSecOvPills {
+  @apply grid gap-2;
+}
+
+.psSecOvPill {
+  @apply flex items-center gap-[10px] rounded-[10px] px-[10px] py-[7px]
+    text-[10px] font-bold max-w-[340px];
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+}
+
+.psSecCheck {
+  background: var(--grad);
+  @apply w-[24px] h-[24px] rounded-full grid place-items-center flex-none;
+}
+
+.psSecCheck__icon {
+  @apply text-white text-[16px];
+}
+
+.psSecOvNote {
+  @apply text-[12px] leading-[1.4] opacity-95;
+}
+
+.psSecImageCard--part2 {
+  @apply justify-self-start;
+  margin-left: -10px;
+}
+
+.psSec__block--part2 {
+  margin-left: 40px;
+}
+
+@media (max-width: 980px) {
+  .psSecImageCard--part2 {
+    margin-left: 0;
+  }
+
+  .psSec__block--part2 {
+    margin-left: 0;
+  }
+
+  .psSecImageCard {
+    @apply justify-self-auto max-w-none;
+  }
+}

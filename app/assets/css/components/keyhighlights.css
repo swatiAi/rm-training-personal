@@ -1,0 +1,131 @@
+.khSec {
+  --b1: #0b5fa8;
+  --b2: #00a9c9;
+  --grad: linear-gradient(90deg, #0b5fa8 0%, #00a9c9 100%);
+  --border: rgba(17, 24, 39, 0.10);
+
+  @apply bg-transparent relative overflow-hidden py-10;
+  padding-bottom: 44px;
+}
+
+.khSec__wrap {
+  @apply mx-auto px-6;
+  max-width: 1220px;
+}
+
+/* Title */
+.khSec__title {
+  @apply text-center font-extrabold text-[#111827] tracking-[-0.02em];
+  font-size: 44px;
+  margin: 0 0 18px;
+}
+
+.khSec__titleAccent {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards row */
+.khSec__row {
+  @apply grid items-stretch mt-[18px] gap-[22px];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1100px) {
+  .khSec__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .khSec__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card styling */
+.khSecCard {
+  @apply bg-white border rounded-2xl shadow-[0_14px_26px_rgba(17,24,39,0.08)]
+    p-[18px] grid items-center gap-4;
+  border-color: rgba(17, 24, 39, 0.08);
+  min-height: 92px;
+
+  grid-template-columns: 54px 1px 1fr;
+}
+
+.khSecCard__icon {
+  @apply grid place-items-center text-white;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--primary-gradient);
+}
+
+.khSecIco {
+  @apply w-6 h-6 object-contain;
+}
+
+.khSecCard__divider {
+  @apply w-px;
+  height: 54px;
+  background: rgba(17, 24, 39, 0.12);
+}
+
+.khSecCard__title {
+  @apply font-extrabold text-[14px] mb-[6px];
+  color: var(--brand-1);
+}
+
+.khSecCard__desc {
+  @apply text-[10.5px] leading-[1.45] text-gray-500 font-semibold;
+  white-space: normal;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
+  min-height: calc(2 * 1.45em);
+}
+
+.khSec__actions {
+  @apply mt-6 flex flex-wrap justify-center items-center gap-[18px];
+}
+
+/* Optional background ornaments */
+.khSec__curve {
+  @apply pointer-events-none absolute;
+  left: -40px;
+  top: -20px;
+  width: 120%;
+  height: 220px;
+  color: rgba(11, 95, 168, 0.25);
+}
+
+.khSec {
+  @apply relative overflow-hidden;
+}
+
+.khDots {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8;
+  width: 120px;
+}
+
+.khDots--left {
+  left: 350px;
+  bottom: 90px;
+}
+
+.khDots--right {
+  right: 350px;
+  top: 90px;
+}
+
+.khSec__row {
+  position: relative;
+  z-index: 2;
+}

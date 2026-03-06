@@ -1,0 +1,91 @@
+.apSec {
+  @apply bg-[#f3f5f7] py-[72px];
+}
+
+.apSec__grid {
+  @apply mx-auto max-w-[1180px] px-6 grid gap-[64px] items-center;
+  grid-template-columns: 542px minmax(0, 1fr);
+}
+
+.apSec__media {
+  @apply w-[542px];
+}
+
+.apSec__singleImg {
+  @apply w-full h-auto block;
+}
+
+.apSec__actions .button {
+  @apply whitespace-nowrap;
+}
+
+/* RIGHT CONTENT */
+.apSec__content {
+  @apply self-center;
+}
+
+.apSec__title {
+  @apply m-0 mb-[18px] font-extrabold text-[44px] leading-[1.05] tracking-[-0.02em] text-[#121826];
+}
+
+.apSec__title span {
+  @apply text-[#0b74b8];
+}
+
+.apSec__text {
+  @apply font-bold m-0 mb-4 text-[14px] leading-[1.85] text-[#52606d] max-w-[640px];
+}
+
+.apSec__actions .button {
+  @apply whitespace-nowrap px-5 py-3;
+}
+
+/* ACTIONS */
+.apSec__actions {
+  @apply mt-[22px] flex gap-[18px] flex-nowrap;
+}
+
+/* ========================= */
+/* TABLET + BELOW            */
+/* ========================= */
+@media (max-width: 1024px) {
+  .apSec__grid {
+    @apply gap-10;
+    grid-template-columns: 1fr;
+  }
+
+  .apSec__media {
+    @apply mx-auto w-full;
+    max-width: 542px;
+  }
+
+  .apSec__actions {
+    @apply flex-wrap;
+  }
+}
+
+/* ========================= */
+/* MOBILE                    */
+/* ========================= */
+@media (max-width: 560px) {
+  .apSec {
+    @apply py-[52px];
+  }
+
+  .apSec__media {
+    @apply w-full;
+  }
+
+  .apSec__title {
+    @apply text-[34px];
+  }
+
+  /* stack the two BaseButtons */
+  .apSec__actions {
+    @apply flex-col items-stretch gap-[14px];
+  }
+
+  .apSec__actions .button {
+    @apply w-full justify-between;
+  }
+}

@@ -1,0 +1,122 @@
+.curSec {
+  @apply bg-[#f5f7fa] pt-[46px] pb-[56px];
+}
+
+.curSec__wrap {
+  @apply max-w-[1100px] mx-auto px-[22px];
+}
+
+/* ===== Banner ===== */
+.curSecBanner {
+  @apply relative overflow-hidden rounded-[22px]
+    shadow-[0_14px_30px_rgba(15,23,42,0.10)];
+}
+
+/* Image simply scales with container width */
+.curSecBanner__img {
+  @apply w-full h-auto block;
+}
+
+.curSecBanner__overlay {
+  @apply absolute inset-0;
+  background:
+    radial-gradient(
+      900px 240px at 50% 0%,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.08) 55%,
+      rgba(0,0,0,0.35) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.18) 60%,
+      rgba(0,0,0,0.45) 100%
+    );
+}
+
+.curSecBanner__text {
+  @apply absolute inset-x-0 bottom-[18px] px-[18px] text-center;
+}
+
+.curSecBanner__title {
+  @apply m-0 font-black tracking-[0.18em] text-[36px] text-[#19b7c6];
+  text-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+.curSecBanner__sub {
+  @apply mt-[6px] mb-0 text-[16px] font-bold text-white/95;
+}
+
+.curSecBanner__desc {
+  @apply mt-[8px] mx-auto mb-0 max-w-[780px]
+    text-[14px] leading-[1.55] text-white/85;
+}
+
+/* ===== Modules ===== */
+.curSecGrid {
+  @apply mt-[18px] grid grid-cols-1 gap-y-[16px] gap-x-[22px];
+}
+
+@media (min-width: 640px) {
+  .curSecGrid {
+    @apply grid-cols-2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .curSecGrid {
+    @apply grid-cols-3;
+  }
+}
+
+.curSecItem {
+  @apply flex items-center gap-[14px]
+    py-[14px] px-[18px]
+    rounded-[24px]
+    bg-[#f6faff]
+    border border-[#dbe7f6]
+    shadow-[0_12px_22px_rgba(15,23,42,0.06)]
+    min-h-[64px];
+}
+
+.curSecItem__num {
+  @apply w-[44px] h-[44px] rounded-full grid place-items-center shrink-0
+    bg-[#0b5ed7] text-white text-[16px] font-black
+    shadow-[0_14px_22px_rgba(11,94,215,0.22)];
+}
+
+.curSecItem__text {
+  @apply text-[14px] font-bold text-[#1f2a37] leading-[1.25];
+}
+
+.curSecCenter {
+  @apply mt-[18px] flex justify-center;
+}
+
+.curSecItem--wide {
+  @apply w-fit;
+}
+
+/* Note */
+.curSecNote {
+  @apply mt-[18px] mb-0 text-center text-[15px] leading-[1.5] text-[#6b7280] font-bold;
+}
+
+.curSecBr {
+  @apply hidden;
+}
+
+@media (min-width: 640px) {
+  .curSecBr {
+    @apply inline;
+  }
+}
+
+/* ===== Buttons row ===== */
+.curSecActions {
+  @apply mt-[22px] flex flex-wrap justify-center gap-[22px];
+}
+
+.curSecBtnFix {
+  @apply whitespace-nowrap;
+}

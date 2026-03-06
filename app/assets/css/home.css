@@ -1,0 +1,24 @@
+.heroHighlightsWrap {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* the vector layer */
+.heroHighlightsWrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/flight-path.png");
+  background-repeat: no-repeat;
+  background-position: 50% 300px;
+  background-size: 1900px auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/*sit above the background */
+.heroHighlightsWrap > section {
+  position: relative;
+  z-index: 1;
+}

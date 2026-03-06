@@ -1,0 +1,245 @@
+.aeSec {
+  --cyan: #1ea7c6;
+  --blue: #0b5ed7;
+  --border: #8dd3ff;
+  --cardbg: #f7fbff;
+  --muted: #6b7280;
+
+  /* ===== MANUAL CONTROLS  ===== */
+  --imageWidth: 620px;        /* change image width here */
+  --imageRatio: 16 / 10;      /* box shape: try 16/9, 3/2, 4/3 */
+  --imagePosX: 70%;           /* crop focus left-right (60%..85%) */
+  --leftRatio: 1.05fr;        /* left column size (TEXT) */
+  --rightRatio: 0.95fr;       /* right column size (IMAGE) */
+  --columnGap: 56px;          /* space between text and image */
+
+  background: #fff;
+  padding: 64px 0 72px;
+}
+
+.aeSec__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ===== TOP GRID (TEXT LEFT, IMAGE RIGHT) ===== */
+.aeTop {
+  display: grid;
+  grid-template-columns: var(--leftRatio) var(--rightRatio);
+  gap: var(--columnGap);
+  align-items: stretch;
+}
+
+@media (max-width: 980px) {
+  .aeTop {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    align-items: start;
+  }
+}
+
+/* ===== LEFT CONTENT ===== */
+.aeTop__content {
+  padding-top: 6px;
+}
+
+.aeTitle {
+  margin: 0;
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .aeTitle {
+    font-size: 38px;
+    white-space: normal;
+  }
+}
+
+.aeTitle__black {
+  color: #000;
+}
+
+.aeTitle__cyan {
+  color: var(--cyan);
+}
+
+.aeKicker {
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.aeDesc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Eligibility cards */
+.aeCards {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
+}
+
+.aeCard {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--cardbg);
+  padding: 14px 22px;
+  box-shadow: 0 10px 26px rgba(11, 94, 215, 0.08);
+}
+
+.aeCard__title {
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.aeCard__desc {
+  margin-top: 4px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* ===== RIGHT IMAGE ===== */
+.aeTop__media {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+@media (max-width: 980px) {
+  .aeTop__media {
+    justify-content: center;
+  }
+}
+
+.aeMediaFrame {
+  width: var(--imageWidth);
+  max-width: 100%;
+  aspect-ratio: var(--imageRatio);
+  height: auto;
+  margin-top: 8px;
+
+  overflow: hidden;
+  border-radius: 26px;
+  border: 2px solid var(--border);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+.aeMediaFrame__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--imagePosX) 50%;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .aeMediaFrame {
+    aspect-ratio: auto;
+  }
+
+  .aeMediaFrame__img {
+    height: 360px;
+  }
+}
+
+/* ===== BOARD SECTION ===== */
+.aeBoard {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.aeBoard__title {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.06;
+}
+
+.aeBoard__titleBlack {
+  color: #000;
+}
+
+.aeBoard__titleGrad {
+  background: linear-gradient(90deg, #0b5ed7 0%, #19b7c6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.aeBoard__kicker {
+  margin: 12px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+/* Requirement pills */
+.aePills {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 980px) {
+  .aePills {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.aePill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--cardbg);
+  box-shadow: 0 10px 26px rgba(11, 94, 215, 0.08);
+}
+
+.aePill__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: var(--cyan);
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.aePill__svg {
+  width: 16px;
+  height: 16px;
+}
+
+.aePill__text {
+  margin: 0;
+  text-align: left;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: #374151;
+}
+
+/* Bottom note */
+.aeBoard__note {
+  margin: 22px 0 0;
+  font-size: 15px;
+  color: var(--muted);
+}

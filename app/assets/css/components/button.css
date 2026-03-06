@@ -1,0 +1,143 @@
+.button {
+  @apply font-medium cursor-pointer ease-in-out select-none w-fit
+    disabled:pointer-events-none disabled:opacity-50
+    inline-flex justify-center items-center
+    gap-4
+    transition-all duration-200;
+}
+
+/* ---------- Variants ---------- */
+
+.button-primary {
+  background: var(--primary-gradient);
+  color: var(--foreground-secondary);
+  box-shadow: var(--primary-gradient-box-shadow);
+}
+
+.button-primary:hover {
+  opacity: 0.9;
+}
+
+.button-secondary {
+  background: var(--secondary-gradient);
+  color: var(--foreground-secondary);
+  box-shadow: var(--secondary-gradient-inner-shadow);
+  filter: drop-shadow(var(--secondary-gradient-drop-shadow));
+}
+
+.button-secondary:hover {
+  opacity: 0.9;
+}
+
+.button-outline {
+  @apply bg-white text-gray-700 border-2;
+  border-color: var(--brand-2);
+}
+
+.button-outline:hover {
+  @apply bg-gray-50;
+}
+
+/* status buttons */
+.button-error {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.button-warning {
+  @apply bg-yellow-500 text-black hover:bg-yellow-600;
+}
+
+/* ---------- Sizes (Responsive) ---------- */
+
+.button-small {
+  @apply px-4 text-sm;
+  height: 36px;
+}
+
+.button-regular {
+  @apply px-6 text-base md:text-lg lg:text-[20px];
+  height: 54px;
+}
+
+.button-large {
+  @apply font-bold px-8 text-lg md:text-xl lg:text-[20px];
+  height: 60px;
+}
+
+/* ---------- Shapes ---------- */
+
+.button-rounded {
+  border-radius: 16px;
+}
+
+.button-pill {
+  @apply rounded-full;
+}
+
+/* ---------- Icon Handling (NuxtIcon) ---------- */
+
+.button__chev {
+  @apply w-6 h-6 shrink-0;
+  transform: scale(1.5);
+  transform-origin: center;
+  display: inline-flex;
+  line-height: 0;
+}
+
+
+.button__chev svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.button:hover .button__chev {
+  transform: scale(1.5) translateX(2px);
+}
+
+.button__chev svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.button-outline .button__chev {
+  background: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+}
+
+.button-outline .button__chev svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  /* icon color */
+  fill: var(--brand-2) !important;
+  stroke: var(--brand-2) !important;
+}
+
+.button-outline .button__chev {
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+/* Nuxt Icon*/
+.button__chev {
+  @apply w-6 h-6 shrink-0;
+  transform: scale(1.5);
+  transform-origin: center;
+  display: inline-flex;
+  line-height: 0;
+}
+
+.button__chev svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* hover nudge */
+.button:hover .button__chev {
+  transform: scale(1.5) translateX(2px);
+}
