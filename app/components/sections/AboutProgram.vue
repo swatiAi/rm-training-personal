@@ -31,7 +31,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
         </p>
 
         <p class="apSec__text">
-          Whether you’re an orthopedic specialist, neurologist, dermatologist, or general practitioner, this
+          Whether you’re an orthopedic specialist, neurologist, dermatologist, scientist, clinical pathologist, general practitioner or medical laboratory Ph.D, this
           certification will transform your clinical practice and position you at the forefront of this
           revolutionary field.
         </p>

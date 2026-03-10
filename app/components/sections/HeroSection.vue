@@ -43,7 +43,7 @@
 
           <p class="desc">
             Master regenerative medicine through a comprehensive 14-week program, delivered in partnership with the
-            American Board of Regenerative Medicine (ABRM) and American Society of Regenerative Medicine (ASRM).
+            American Board of Regenerative Medicine (ABRM) - American Society of Regenerative Medicine (ASRM).
           </p>
         </div>
 

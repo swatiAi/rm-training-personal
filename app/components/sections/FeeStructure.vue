@@ -4,18 +4,18 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 
 const options = [
   {
-    title: 'OPTION 1: Course Only:',
+    title: 'OPTION 1: Course Only',
     price: 'USD 1,500',
     img: '/img/fee-option-1.png',
     bullets: [
       'Full access to all three program parts',
-      'Recorded lecture library',
+      'Access to ASRM lecture library',
       'Course materials and resources',
       'Group Discounts: 10% off for 2 candidates | 15% off for 3+ candidates',
     ],
   },
   {
-    title: 'OPTION 2: Course Only:',
+    title: 'OPTION 2: Course + ASRM Registration and Examination',
     price: 'USD 3,250',
     img: '/img/fee-option-2.png',
     bullets: [
